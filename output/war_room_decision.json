@@ -1,0 +1,144 @@
+{
+  "decision": "Roll Back",
+  "rationale": [
+    "Metric health assessed as 'concerning' across 7 tracked KPIs.",
+    "User sentiment is 57% negative. Top user issue: 'ui ux' (2 mentions).",
+    "4 critical risks identified by CriticAgent. Decision reflects the need for immediate corrective action.",
+    "Decision: ROLL BACK. The combination of rising crash rates, retention collapse, and negative user sentiment makes continued rollout untenable. Rollback protects users and limits brand damage."
+  ],
+  "risk_register": [
+    {
+      "risk": "Crash rate is at 8.8% and still increasing — no recovery signal.",
+      "severity": "Critical",
+      "category": "Technical Stability",
+      "mitigation": "Immediate rollback or targeted force-update with hotfix build."
+    },
+    {
+      "risk": "Latency at 495ms (SLO = 300ms) — requests may begin timing out.",
+      "severity": "Critical",
+      "category": "Performance / SLO",
+      "mitigation": "Scale backend horizontally. Profile and optimise hot code paths immediately."
+    },
+    {
+      "risk": "D1 retention collapsed -51.6% — product is failing first-day experience.",
+      "severity": "Critical",
+      "category": "Retention / Churn",
+      "mitigation": "Audit first-run experience. Fix crashes on onboarding flows."
+    },
+    {
+      "risk": "Support tickets surged +1229% — support team will be overwhelmed.",
+      "severity": "High",
+      "category": "Operations",
+      "mitigation": "Activate overflow support response. Publish a known-issues status page."
+    },
+    {
+      "risk": "User sentiment is 57% negative — brand perception may be permanently damaged.",
+      "severity": "Critical",
+      "category": "Brand / Reputation",
+      "mitigation": "Publish executive-level incident acknowledgement. Offer affected users compensation or service credits."
+    },
+    {
+      "risk": "Known HIGH severity bug still open: HIGH ()",
+      "severity": "High",
+      "category": "Known Bugs",
+      "mitigation": "Escalate  to on-call engineering. Patch must ship in next 24h."
+    },
+    {
+      "risk": "Known HIGH severity bug still open: HIGH ()",
+      "severity": "High",
+      "category": "Known Bugs",
+      "mitigation": "Escalate  to on-call engineering. Patch must ship in next 24h."
+    }
+  ],
+  "action_plan": [
+    {
+      "action": "Immediate rollback or targeted force-update with hotfix build.",
+      "owner": "Engineering / SRE",
+      "priority": "Critical"
+    },
+    {
+      "action": "Scale backend horizontally. Profile and optimise hot code paths immediately.",
+      "owner": "Backend Engineering",
+      "priority": "Critical"
+    },
+    {
+      "action": "Audit first-run experience. Fix crashes on onboarding flows.",
+      "owner": "Product & Growth",
+      "priority": "Critical"
+    },
+    {
+      "action": "Publish executive-level incident acknowledgement. Offer affected users compensation or service credits.",
+      "owner": "Marketing & Comms",
+      "priority": "Critical"
+    },
+    {
+      "action": "Activate overflow support response. Publish a known-issues status page.",
+      "owner": "Customer Support",
+      "priority": "High"
+    },
+    {
+      "action": "Escalate  to on-call engineering. Patch must ship in next 24h.",
+      "owner": "Engineering / Release",
+      "priority": "High"
+    }
+  ],
+  "communication_plan": [
+    "[Internal] Immediately notify Engineering, Product, and Executive leadership of rollback.",
+    "[Internal] Activate incident bridge and assign incident commander.",
+    "[Internal] Engineering team to initiate rollback procedure to v3.1.x within 1 hour.",
+    "[Internal] SRE to monitor rollback deployment and verify metric normalisation.",
+    "[Customer] Publish status page incident: 'We are aware of issues affecting v3.2.0 and are rolling back.'",
+    "[Customer] In-app banner acknowledging the issue and informing users of the fix timeline.",
+    "[Customer] Email to affected users with apology and ETA for resolution.",
+    "[Press] Prepare reactive comms statement if press inquiries arise.",
+    "[Internal] Track remediation of: 'Crash rate is at 8.8% and still increasing — no recovery signal....' — assign to Engineering / SRE.",
+    "[Internal] Track remediation of: 'Latency at 495ms (SLO = 300ms) — requests may begin timing out....' — assign to Backend Engineering."
+  ],
+  "confidence_score": 0.225,
+  "llm_reasoning": null,
+  "llm_critique": null,
+  "_metadata": {
+    "generated_at": "2026-04-07T15:07:22.035073+00:00",
+    "system": "AI War Room Decision System v1.0.0",
+    "agents_involved": [
+      "DataAnalystAgent",
+      "MarketingAgent",
+      "ProductManagerAgent",
+      "CriticAgent",
+      "EvaluatorAgent"
+    ],
+    "confidence_label": "Very Low Confidence",
+    "overall_metric_health": "concerning",
+    "overall_risk_level": "Critical",
+    "anomalies_detected": [],
+    "criteria_passed": "0/6",
+    "sentiment_label": "negative",
+    "negative_ratio": 0.567,
+    "pm_proposed_decision": "Roll Back",
+    "critic_challenges": [],
+    "missing_evidence": [
+      "Revenue and GMV impact data not available. Financial risk unquantified.",
+      "Churn rate not tracked. Long-term retention impact unknown.",
+      "Feedback sample size is small (<50 entries). Sentiment ratios may not represent full user base.",
+      "No beta test baseline provided. Before/after comparison unavailable."
+    ],
+    "confidence_breakdown": {
+      "metric_health": {
+        "score": 0.5,
+        "weight": 0.35
+      },
+      "criteria_pass_rate": {
+        "score": 0.0,
+        "weight": 0.25
+      },
+      "sentiment": {
+        "score": 0.15,
+        "weight": 0.2
+      },
+      "risk_level": {
+        "score": 0.1,
+        "weight": 0.2
+      }
+    }
+  }
+}

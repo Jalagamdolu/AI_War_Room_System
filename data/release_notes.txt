@@ -1,0 +1,78 @@
+## Release Notes — v3.2.0 "Horizon" | 2026-03-25
+
+### Overview
+Version 3.2.0 is a major feature release focused on modernising the core user experience,
+introducing real-time collaboration, and improving platform performance on mobile devices.
+
+---
+
+### New Features
+
+**Real-Time Collaboration Engine**
+- Users can now co-edit documents and projects simultaneously (up to 10 concurrent users).
+- Live cursor presence and activity indicators.
+- Conflict resolution via Operational Transformation (OT).
+- Broadcasts changes via WebSocket with <100 ms target latency.
+
+**Redesigned Dashboard (UI v3)**
+- Full redesign of the home dashboard using the new Horizon Design System.
+- Improved navigation hierarchy with collapsible sidebars.
+- Dark mode now fully supported across all surfaces.
+- Responsive layout for tablets and large-screen mobile.
+
+**AI-Assisted Search**
+- Semantic search powered by an on-device embedding model.
+- Natural language queries now supported (e.g. "documents edited last week").
+- Search results ranked by relevance with adaptive feedback loop.
+
+**Improved Onboarding**
+- New interactive tutorial for first-time users.
+- Personalised setup wizard based on user role (individual / team / enterprise).
+
+---
+
+### Performance Improvements
+- cold start time reduced by 18% on mid-tier Android devices (A-series chipsets).
+- Image loading pipeline rewritten using lazy streaming; bandwidth reduced by 22%.
+- Background sync jobs consolidated to reduce CPU wake-lock frequency.
+
+---
+
+### Known Issues (as of release)
+
+| ID       | Severity | Description                                                               |
+|----------|----------|---------------------------------------------------------------------------|
+| BUG-1091 | HIGH     | Intermittent crash on dashboard load when offline cache is stale          |
+| BUG-1104 | HIGH     | Push notifications silently fail for users on Android 12 (targetSdk 33)  |
+| BUG-1117 | MEDIUM   | Google OAuth login may invalidate session tokens after 15-minute idle     |
+| BUG-1123 | MEDIUM   | Real-time sync drops connection if WebSocket reconnects within 5 seconds  |
+| BUG-1138 | LOW      | Dark mode toggle occasionally takes 2–3 taps to activate on iOS 17       |
+| BUG-1147 | LOW      | Battery usage reported as higher than expected in background processes    |
+
+---
+
+### Breaking Changes
+- The legacy REST sync API (`/api/v1/sync`) is deprecated. Clients must migrate to
+  the new WebSocket endpoint (`wss://api.example.com/sync/v2`) by v3.4.0.
+- Third-party plugin API `PluginContext.getData()` signature changed. See migration guide.
+
+---
+
+### Dependencies Updated
+- React Native 0.73 → 0.74
+- Realm DB 12.5 → 12.8  (includes critical security patch for CVE-2025-3892)
+- Firebase SDK 21.0 → 22.1
+
+---
+
+### Rollout Plan
+- Phase 1 (5% of users): 2026-03-25
+- Phase 2 (25% of users): 2026-03-27
+- Phase 3 (100% of users): 2026-03-30 (pending phase 2 KPI review)
+
+---
+
+### Contacts
+- Engineering Lead: j.carter@example.com
+- Product Owner: m.patel@example.com
+- On-call SRE: pagerduty://war-room-channel

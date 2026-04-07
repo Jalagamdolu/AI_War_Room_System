@@ -1,0 +1,142 @@
+[
+  {
+    "date": "2026-03-25",
+    "dau": 12400,
+    "retention_d1": 0.62,
+    "retention_d7": 0.31,
+    "crash_rate": 0.008,
+    "latency_ms": 210,
+    "conversion_rate": 0.043,
+    "support_tickets": 45
+  },
+  {
+    "date": "2026-03-26",
+    "dau": 13100,
+    "retention_d1": 0.61,
+    "retention_d7": 0.30,
+    "crash_rate": 0.009,
+    "latency_ms": 218,
+    "conversion_rate": 0.042,
+    "support_tickets": 52
+  },
+  {
+    "date": "2026-03-27",
+    "dau": 14800,
+    "retention_d1": 0.60,
+    "retention_d7": 0.29,
+    "crash_rate": 0.012,
+    "latency_ms": 225,
+    "conversion_rate": 0.041,
+    "support_tickets": 68
+  },
+  {
+    "date": "2026-03-28",
+    "dau": 18200,
+    "retention_d1": 0.58,
+    "retention_d7": 0.28,
+    "crash_rate": 0.018,
+    "latency_ms": 248,
+    "conversion_rate": 0.039,
+    "support_tickets": 94
+  },
+  {
+    "date": "2026-03-29",
+    "dau": 21500,
+    "retention_d1": 0.55,
+    "retention_d7": 0.27,
+    "crash_rate": 0.025,
+    "latency_ms": 275,
+    "conversion_rate": 0.037,
+    "support_tickets": 132
+  },
+  {
+    "date": "2026-03-30",
+    "dau": 23800,
+    "retention_d1": 0.52,
+    "retention_d7": 0.25,
+    "crash_rate": 0.031,
+    "latency_ms": 298,
+    "conversion_rate": 0.035,
+    "support_tickets": 178
+  },
+  {
+    "date": "2026-03-31",
+    "dau": 25100,
+    "retention_d1": 0.49,
+    "retention_d7": 0.23,
+    "crash_rate": 0.038,
+    "latency_ms": 312,
+    "conversion_rate": 0.033,
+    "support_tickets": 215
+  },
+  {
+    "date": "2026-04-01",
+    "dau": 24600,
+    "retention_d1": 0.46,
+    "retention_d7": 0.21,
+    "crash_rate": 0.044,
+    "latency_ms": 335,
+    "conversion_rate": 0.030,
+    "support_tickets": 261
+  },
+  {
+    "date": "2026-04-02",
+    "dau": 23100,
+    "retention_d1": 0.43,
+    "retention_d7": 0.19,
+    "crash_rate": 0.051,
+    "latency_ms": 358,
+    "conversion_rate": 0.028,
+    "support_tickets": 310
+  },
+  {
+    "date": "2026-04-03",
+    "dau": 21500,
+    "retention_d1": 0.40,
+    "retention_d7": 0.17,
+    "crash_rate": 0.058,
+    "latency_ms": 381,
+    "conversion_rate": 0.025,
+    "support_tickets": 362
+  },
+  {
+    "date": "2026-04-04",
+    "dau": 20200,
+    "retention_d1": 0.38,
+    "retention_d7": 0.16,
+    "crash_rate": 0.063,
+    "latency_ms": 402,
+    "conversion_rate": 0.023,
+    "support_tickets": 408
+  },
+  {
+    "date": "2026-04-05",
+    "dau": 18900,
+    "retention_d1": 0.35,
+    "retention_d7": 0.14,
+    "crash_rate": 0.071,
+    "latency_ms": 430,
+    "conversion_rate": 0.021,
+    "support_tickets": 461
+  },
+  {
+    "date": "2026-04-06",
+    "dau": 17300,
+    "retention_d1": 0.33,
+    "retention_d7": 0.13,
+    "crash_rate": 0.079,
+    "latency_ms": 458,
+    "conversion_rate": 0.019,
+    "support_tickets": 524
+  },
+  {
+    "date": "2026-04-07",
+    "dau": 15800,
+    "retention_d1": 0.30,
+    "retention_d7": 0.11,
+    "crash_rate": 0.088,
+    "latency_ms": 495,
+    "conversion_rate": 0.017,
+    "support_tickets": 598
+  }
+]
